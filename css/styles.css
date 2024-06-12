@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background-color: #000;  /* Fondo negro */
     display: flex;
     justify-content: center;
@@ -62,35 +63,22 @@ h1 {
 }
 
 #paragraph-container {
-    width: 100%; /* Cambiado a 100% para ocupar todo el ancho disponible */
+    width: 80%; /* Use a percentage for responsive width */
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.8em; /* Adjust font size for smaller screens */
     line-height: 1.5;
-    max-width: 100%; /* Asegura que el contenedor no exceda el ancho máximo del viewport */
-    box-sizing: border-box;
-    padding: 20px; /* Añadido un relleno para mejorar la legibilidad en dispositivos móviles */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-}
-
-
-@media (max-width: 768px) {
+    padding: 1.5em; /* Add some padding for readability */
+    overflow-y: scroll
+  }
+  
+  /* Media query for screens smaller than 768px */
+  @media (max-width: 768px) {
     #paragraph-container {
-        width: 80%;
-        font-size: 1.2em; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
-        line-height: 1.4; /* Ajusta la altura de la línea para pantallas más pequeñas */
-        max-width: 100%;
+      font-size: 1.4em; /* Further reduce font size on very small screens */
+      overflow-y: scroll
     }
-}
-
-@media (max-width: 480px) {
-    #paragraph-container {
-        width: 90%;
-        font-size: 1em; /* Ajusta el tamaño de la fuente para pantallas muy pequeñas */
-        line-height: 1.3; /* Ajusta la altura de la línea para pantallas muy pequeñas */
-        max-width: 100%;
-    }
-}
-
+  }
+  
 
 #bouquet {
     display: flex;
