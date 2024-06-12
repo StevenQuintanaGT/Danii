@@ -1,0 +1,220 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;  /* Fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#image {
+    margin-top: 20px;
+    max-width: 90%;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#button:hover {
+    background-color: #ccc;
+}
+
+#space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+ #paragraph-container {
+            width: 50%;
+            text-align: center;
+            font-size: 1.5em;
+            line-height: 1.5;
+        }
+
+        #paragraph-container {
+            width: 50%;
+            text-align: center;
+            font-size: 1.5em;
+            line-height: 1.5;
+            margin: 0 auto; /* Centra el contenedor horizontalmente */
+        }
+        
+        @media (max-width: 768px) {
+            #paragraph-container {
+                width: 80%;
+                font-size: 1.2em; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+                line-height: 1.4; /* Ajusta la altura de la línea para pantallas más pequeñas */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #paragraph-container {
+                width: 90%;
+                font-size: 1em; /* Ajusta el tamaño de la fuente para pantallas muy pequeñas */
+                line-height: 1.3; /* Ajusta la altura de la línea para pantallas muy pequeñas */
+            }
+        }
+        
+
+#bouquet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.star {
+    position: absolute;
+    background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 2s linear infinite;
+}
+
+
+.flower {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0);
+    opacity: 0;
+    animation: grow 2s ease forwards;
+}
+
+.petal {
+    width: 60px;
+    height: 60px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.petal:nth-child(1) {
+    top: 0;
+    left: 20px;
+}
+
+.petal:nth-child(2) {
+    top: 20px;
+    left: 0;
+}
+
+.petal:nth-child(3) {
+    top: 20px;
+    right: 0;
+}
+
+.petal:nth-child(4) {
+    top: 40px;
+    left: 20px;
+}
+
+.center {
+    width: 40px;
+    height: 40px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.stem {
+    width: 10px;
+    height: 100px;
+    background-color: #32cd32;
+    position: absolute;
+    top: 70px;
+}
+
+.leaf {
+    width: 20px;
+    height: 40px;
+    background-color: #32cd32;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: -15px;
+    transform: rotate(-30deg);
+}
+
+.leaf:nth-of-type(2) {
+    top: 100px;
+    left: 15px;
+    transform: rotate(30deg);
+}
+
+.flower1 .petal {
+    background-color: #ff69b4;
+}
+
+.flower2 .petal {
+    background-color: #ffa07a;
+}
+
+.flower3 .petal {
+    background-color: #87cefa;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
